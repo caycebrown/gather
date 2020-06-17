@@ -7,10 +7,12 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "concurrently": "^5.2.0",
     "nodemon": "^2.0.4"
   },
   "scripts": {
     "server": "node server.js",
+    "dev": "concurrently \"nodemon server.js\" \"cd client && npm start\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
