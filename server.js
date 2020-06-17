@@ -9,7 +9,9 @@ if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
   };
 
-  app.listen(PORT, function(err) {
-      if(err){throw err}
-      console.log(`Server has started on port ${PORT}`)
-  })
+app.get('/ping', (req, res) => res.send('pong'));
+
+app.listen(PORT, function(err) {
+    if(err){throw err}
+    console.log(`Server has started on port ${PORT}`)
+})
